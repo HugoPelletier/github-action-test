@@ -1,4 +1,15 @@
 # Changelog
 
-## Unreleased (2021-09-20)
 
+## Features
+
+
+## Bugs
+
+
+## Other
+
+
+
+
+> Changelog generated through the projects' GitHub Actions.
