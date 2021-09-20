@@ -22,6 +22,7 @@ jobs:
         # Stage the file, commit and push
         git fetch --all
         git pull origin main
+        git log --pretty=oneline
 
     - name:
       run: |
