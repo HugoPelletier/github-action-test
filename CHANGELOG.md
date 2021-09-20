@@ -2,6 +2,6 @@
 
 ## Unreleased (2021-09-20)
 
-#### New Features
+#### Fixes
 
-* commit changelog typo
+* test 1
