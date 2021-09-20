@@ -11,14 +11,28 @@ jobs:
     strategy:
       matrix:
         # in this example, there is a newer version already installed, 3.7.7, so the older version will be downloaded
-        python-version: ['3.8', '3.9']
+        python-version: ['3.9']
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - run: |
+    - name:
+      run: |
         echo "Install package"
         pip install auto-changelog
         echo "Generate changelog"
         python -m auto_changelog -u
+
+    - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+    - name: commit
+      run: |
+        # Stage the file, commit and push
+        git add CHANGELOG.md
+        git commit -m "chore: Update CHANGELOG"
+        git push origin main
