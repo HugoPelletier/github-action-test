@@ -17,6 +17,12 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    - name: fetch data
+        run: |
+          # Stage the file, commit and push
+          git fetch --all
+          git pull origin main
+
     - name:
       run: |
         echo "Install package"
