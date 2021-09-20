@@ -2,6 +2,6 @@
 
 ## Unreleased (2021-09-20)
 
-#### New Features
+#### Others
 
-* (api): adding main entrypoint
+* (workflow): fix structure
